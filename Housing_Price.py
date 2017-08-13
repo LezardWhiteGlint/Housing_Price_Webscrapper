@@ -14,6 +14,7 @@ driver = webdriver.Firefox(executable_path='/root/geckodriver')
 
 lv = [1,2,3]
 years = ['07','08','09',10,11,12,13,14,15,16,17]
+op_count = 0
 
 wait_time = 1
 date = []
@@ -30,6 +31,8 @@ for l in lv:
                     name.append(driver.find_elements_by_xpath('//*[@id="order_f"]/tr['+str(i+1)+']/td[2]/a')[0].text)
                     price.append(driver.find_element_by_xpath('//*[@id="order_f"]/tr['+str(i+1)+']/td[3]').text)
                     date.append('20'+str(y)+'-'+str(m+1))
+                    print(str(op_count))
+                    op_count += 1
             except IndexError:
                 pass
     #write data
