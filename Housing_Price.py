@@ -51,4 +51,5 @@ for l in lv:
     price =[]
 
 #quit browser
-driver.quit()
+driver.close()
+display.stop()
