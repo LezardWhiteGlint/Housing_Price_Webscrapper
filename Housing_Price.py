@@ -2,9 +2,15 @@
 import time
 import openpyxl
 import os
+from pyvirtualdisplay import Display
 from selenium import webdriver
-driver = webdriver.Chrome(executable_path='/Users/lezardvaleth/Documents/Python/chromedriver')
-os.chdir('/Users/lezardvaleth/Documents/Python/Housing_Price')
+
+#virtual dispaly ON
+display = Display(visible=0, size=(800, 600))
+display.start()
+
+
+driver = webdriver.Firefox(executable_path='/root/geckodriver')
 
 lv = [1,2,3]
 years = ['07','08','09',10,11,12,13,14,15,16,17]
